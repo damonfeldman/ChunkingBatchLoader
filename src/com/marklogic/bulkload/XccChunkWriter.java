@@ -139,8 +139,9 @@ public abstract class XccChunkWriter {
 		@Override
 		public ContentSource next() {
 			idx++;
-			if (idx > contentSources.length - 1);
+			if (idx > contentSources.length - 1) {
 				idx = 0;
+			}
 			return contentSources[idx];
 		}
 		
